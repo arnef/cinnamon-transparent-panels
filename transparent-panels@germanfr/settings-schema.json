@@ -30,6 +30,13 @@
 		"tooltip" : "Remove panel transparency when it's not transparent."
 	},
 
+	"force-on-maximized": {
+		"type": "switch",
+		"default": false,
+		"description": "Force transparency even when windows are maximized",
+		"tooltip": "Enable transparency even if any window is vertically/horizontally maximized"
+	},
+
 	"section-filters" : {
 		"type" : "section",
 		"description" : "Filter panels"

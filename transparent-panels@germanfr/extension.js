@@ -68,6 +68,7 @@ MyExtension.prototype = {
 		this.settings.bind("panel-right", "enable_position_right", this.on_settings_changed);
 		this.settings.bind("panel-bottom", "enable_position_bottom", this.on_settings_changed);
 		this.settings.bind("panel-left", "enable_position_left", this.on_settings_changed);
+		this.settings.bind("force-on-maximized", "force_on_maximized", this.on_settings_changed);
 
 		this._classname = this.theme_defined ? this.transparency_type : this.transparency_type + INTERNAL_PREFIX;
 
@@ -94,7 +95,7 @@ MyExtension.prototype = {
 
 	on_state_change: function (monitor) {
 		this._filter.for_each_panel(panel => {
-			let transparentize = this.policy.is_transparent(panel);
+			let transparentize = this.force_on_maximized || this.policy.is_transparent(panel);
 			this.make_transparent(panel, transparentize);
 		}, monitor);
 	},
