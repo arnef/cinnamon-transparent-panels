@@ -73,6 +73,14 @@ msgstr ""
 msgid "Remove panel transparency when it's not transparent."
 msgstr ""
 
+#. settings-schema.json->force-on-maximized->description
+msgid "Force transparency even when windows are maximized"
+msgstr ""
+
+#. settings-schema.json->force-on-maximized->tooltip
+msgid "Enable transparency even if any window is vertically/horizontally maximized."
+msgstr ""
+
 #. settings-schema.json->section-filters->description
 msgid "Filter panels"
 msgstr ""
